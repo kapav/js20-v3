@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,10 @@ import { DeclivityComponent } from './shared/components/declivity/declivity.comp
 import { InclineComponent } from './shared/components/incline/incline.component';
 import { PitchComponent } from './shared/components/pitch/pitch.component';
 import { SlantComponent } from './shared/components/slant/slant.component';
-import { TiltComponent } from './shared/components/tilt/tilt.component'
+import { TiltComponent } from './shared/components/tilt/tilt.component';
+import { StaircaseComponent } from './shared/components/staircase/staircase.component';
+import { StairwayComponent } from './shared/components/stairway/stairway.component';
+import { StairwellComponent } from './shared/components/stairwell/stairwell.component'
 
 @NgModule({
   declarations: [
@@ -30,10 +34,14 @@ import { TiltComponent } from './shared/components/tilt/tilt.component'
     InclineComponent,
     PitchComponent,
     SlantComponent,
-    TiltComponent
+    TiltComponent,
+    StaircaseComponent,
+    StairwayComponent,
+    StairwellComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

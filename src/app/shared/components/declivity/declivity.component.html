@@ -1,1 +1,12 @@
 <p>declivity works!</p>
+
+<!--привязка значения, привязка события-->
+<label for='x-input'>X</label>
+<input type="text" id="x-input"
+  [value]="xValue"
+  (input)="xValue = $event.target.value">
+
+<label for="y-input">Y</label>
+<input type="text" id="y-input"
+  [ngModel]="yValue"
+  (ngModelChange)="yValue = $event">
