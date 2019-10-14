@@ -1,0 +1,17 @@
+<app-desc-one
+  [descOneLettering]="tuckInscription"
+  [descOneAnnouncement]="revealNotice"
+  [descOneToggle]="stashed"
+></app-desc-one>
+
+<app-desc-two></app-desc-two>
+
+<p>anc-one works!</p>
+
+<div
+  *ngIf="stashed; else pose"
+>{{ positiveNotificFromAncOne }}</div>
+
+<ng-template #pose>
+  <div>{{ negativeNotificFromAncOne }}</div>
+</ng-template>

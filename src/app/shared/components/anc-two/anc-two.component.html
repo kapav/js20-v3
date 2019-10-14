@@ -1,0 +1,15 @@
+<p>anc-two works!</p>
+
+<div
+  *ngIf="illustrated; else pose"
+>{{ positiveNotificFromAncTwo }}</div>
+
+<ng-template #pose>
+  <div>{{ negativeNotificFromAncTwo }}</div>
+</ng-template>
+
+<app-desc-three
+  (onDescThree)="tumblerFromDescThree($event)"
+></app-desc-three>
+
+<app-desc-four></app-desc-four>

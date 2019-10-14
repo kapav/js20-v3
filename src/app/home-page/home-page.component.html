@@ -1,0 +1,19 @@
+<app-anc-one
+  [ancOneLettering]="buryInscription"
+  [ancOneAnnouncement]="evinceNotice"
+  [ancOneToggle]="lurked"
+></app-anc-one>
+
+<p>home-page works!</p>
+
+<div
+  *ngIf="lurked; else pose"
+>{{ positiveNotificFromHomePage }}</div>
+
+<ng-template #pose>
+  <div>{{ negativeNotificFromHomePage }}</div>
+</ng-template>
+
+<app-anc-two
+  (onAncTwoToggle)="tumblerFromAncTwo(lurked = $event)"
+></app-anc-two>
