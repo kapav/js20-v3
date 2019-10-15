@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {UserTe} from '../../interfaces/user'
+
 @Component({
   selector: 'app-slant',
   templateUrl: './slant.component.html',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlantComponent implements OnInit {
 
+  roles: string[] = ['', 'Гость', 'Модератор', 'Администратор']
+
+  modelFew: UserTe = new UserTe(0, '', '', 0)
+  submittedFew: boolean = false
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  onSubmitFew() {
+    this.submittedFew = true
+    console.log('Отправлено. Форма, управляемая шаблоном. Несколько ошибок на контрол')
+  }
+
+  getDiagnosticFew() { return JSON.stringify(this.modelFew) }
 
 }

@@ -18,7 +18,9 @@ import { SlantComponent } from './shared/components/slant/slant.component';
 import { TiltComponent } from './shared/components/tilt/tilt.component';
 import { StaircaseComponent } from './shared/components/staircase/staircase.component';
 import { StairwayComponent } from './shared/components/stairway/stairway.component';
-import { StairwellComponent } from './shared/components/stairwell/stairwell.component'
+import { StairwellComponent } from './shared/components/stairwell/stairwell.component';
+import { BracketPipe } from './shared/pipes/bracket.pipe'
+import { EvidenceService } from './shared/services/evidence.service';
 
 @NgModule({
   declarations: [
@@ -37,14 +39,15 @@ import { StairwellComponent } from './shared/components/stairwell/stairwell.comp
     TiltComponent,
     StaircaseComponent,
     StairwayComponent,
-    StairwellComponent
+    StairwellComponent,
+    BracketPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EvidenceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
