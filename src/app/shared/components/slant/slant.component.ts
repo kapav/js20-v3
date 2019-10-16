@@ -24,6 +24,6 @@ export class SlantComponent implements OnInit {
     console.log('Отправлено. Форма, управляемая шаблоном. Несколько ошибок на контрол')
   }
 
-  getDiagnosticFew() { return JSON.stringify(this.modelFew) }
+  get diagnosticFew() { return JSON.stringify(this.modelFew) }
 
 }

@@ -8,30 +8,30 @@
       <label for="name">Имя</label>
       <!--Каждый элемент использует id для связи с label'ом
       и атрибут name для того, чтобы AngularForm ассоциировал элемент управления с формой-->
-      <input type="text" class="form-control" id="name"
+      <input type="text" id="name" class="form-control"
         [(ngModel)]="modelOe.name" name="name" required
-        #name="ngModel">
-      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        #nameOe="ngModel">
+      <div [hidden]="nameOe.valid || nameOe.pristine" class="alert alert-danger">
         Поле имя обязательное для заполнения
       </div>
     </div>
     <div class="form-group">
       <label for="age">Возраст</label>
-      <input type="number" class="form-control" id="age"
+      <input type="number" id="age" class="form-control"
       [(ngModel)]="modelOe.age" name="age" required
-      #age="ngModel">
-      <div [hidden]="age.valid || age.pristine" class="alert alert-danger">
+      #ageOe="ngModel">
+      <div [hidden]="ageOe.valid || ageOe.pristine" class="alert alert-danger">
         Поле возраст обязательное для заполнения
       </div>
     </div>
     <div class="form-group">
       <label for="role">Роль</label>
-      <select class="form-control" id="role"
+      <select id="role" class="form-control"
       [(ngModel)]="modelOe.role" name="role" required
-      #role="ngModel">
+      #roleOe="ngModel">
         <option *ngFor="let r of roles" [value]="r">{{ r }}</option>
       </select>
-      <div [hidden]="role.valid || role.pristine">
+      <div [hidden]="roleOe.valid || roleOe.pristine">
         Поле роль обязательное для заполнения
       </div>
     </div>
