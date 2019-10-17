@@ -5,30 +5,33 @@
   <!--Angular автоматически устанавливает директиву ngForm для всех форм-->
   <form (ngSubmit)="onSubmitOe()" #userformOe="ngForm">
     <div class="form-group">
-      <label for="name">Имя</label>
+      <label for="nameOe">Имя</label>
       <!--Каждый элемент использует id для связи с label'ом
       и атрибут name для того, чтобы AngularForm ассоциировал элемент управления с формой-->
-      <input type="text" id="name" class="form-control"
-        [(ngModel)]="modelOe.name" name="name" required
+      <input type="text" id="nameOe" class="form-control"
+        [(ngModel)]="modelOe.name" name="name"
+        required
         #nameOe="ngModel">
       <div [hidden]="nameOe.valid || nameOe.pristine" class="alert alert-danger">
         Поле имя обязательное для заполнения
       </div>
     </div>
     <div class="form-group">
-      <label for="age">Возраст</label>
-      <input type="number" id="age" class="form-control"
-      [(ngModel)]="modelOe.age" name="age" required
-      #ageOe="ngModel">
+      <label for="ageOe">Возраст</label>
+      <input type="number" id="ageOe" class="form-control"
+        [(ngModel)]="modelOe.age" name="age"
+        required
+        #ageOe="ngModel">
       <div [hidden]="ageOe.valid || ageOe.pristine" class="alert alert-danger">
         Поле возраст обязательное для заполнения
       </div>
     </div>
     <div class="form-group">
-      <label for="role">Роль</label>
-      <select id="role" class="form-control"
-      [(ngModel)]="modelOe.role" name="role" required
-      #roleOe="ngModel">
+      <label for="roleOe">Роль</label>
+      <select id="roleOe" class="form-control"
+        [(ngModel)]="modelOe.role" name="role"
+        required
+        #roleOe="ngModel">
         <option *ngFor="let r of roles" [value]="r">{{ r }}</option>
       </select>
       <div [hidden]="roleOe.valid || roleOe.pristine">

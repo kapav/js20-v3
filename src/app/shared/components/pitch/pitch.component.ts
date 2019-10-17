@@ -21,7 +21,7 @@ export class PitchComponent implements OnInit {
 
   onSubmitOe() {
     this.submittedOe = true
-    console.log('Отправлено. Форма, управляемая шаблоном. По одной ошибке на контрол')
+    console.log('Отправлено. Форма, управляемая шаблоном. По одной ошибке на контрол.')
   }
 
   get diagnosticOe() { return JSON.stringify(this.modelOe) }
