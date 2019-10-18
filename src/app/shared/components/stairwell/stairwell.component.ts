@@ -48,6 +48,33 @@ export class StairwellComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
+    this.buildForm()
+  }
+
+  buildForm() {
+    this.userForm = this.fb.group({
+      name: [this.user.name, [
+        Validators.required,
+        Validators.minLength(4),
+        Validators.maxLength(15)
+      ]],
+      age: [this.user.age, [
+        Validators.required,
+        Validators.pattern('\\d+')
+      ]],
+      email: [this.user.email, [
+        Validators.required,
+        Validators.pattern('[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}')
+      ]],
+      role: [this.user.role, [
+        Validators.required
+      ]]
+    })
+
+    this.userForm.valueChanges
+      .subscribe(data => this.onValueChanged(data))
+
+    this.onValueChanged()
   }
 
   onValueChanged(data?: any) {
@@ -58,7 +85,20 @@ export class StairwellComponent implements OnInit {
       this.formErrors[field] = ''
       // form.get - получение элемента управления
       const control = form.get(field)
+
+      if (control && control.dirty && !control.valid) {
+        const message = this.validationMessages[field]
+        for (const key in control.errors) {
+          this.formErrors[field] += message[key] + ' '
+        }
+      }
     }
+  }
+
+  onSubmit() {
+    console.log('Отправлено. Реактивная форма. Сообщения об ошибках из кода компонента.')
+    console.log(this.userForm.valid)
+    console.log(this.userForm.value)
   }
 
 }
