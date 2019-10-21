@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { EvidenceService } from './shared/services/evidence.service';
 import { BracketPipe } from './shared/pipes/bracket.pipe'
 import {UnlessDirective} from './shared/directives/bevel/bevel.directive'
+import {HighlightDirective} from './shared/directives/chamfer/chamfer.directive'
 import { AppComponent } from './app.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import { AncOneComponent } from './shared/components/anc-one/anc-one.component';
@@ -22,6 +23,8 @@ import { TiltComponent } from './shared/components/tilt/tilt.component';
 import { StaircaseComponent } from './shared/components/staircase/staircase.component';
 import { StairwayComponent } from './shared/components/stairway/stairway.component';
 import { StairwellComponent } from './shared/components/stairwell/stairwell.component';
+import {CliffComponent} from './shared/components/cliff/cliff.component'
+import {BiasComponent} from './shared/components/bias/bias.component'
 
 @NgModule({
   declarations: [
@@ -41,8 +44,11 @@ import { StairwellComponent } from './shared/components/stairwell/stairwell.comp
     StaircaseComponent,
     StairwayComponent,
     StairwellComponent,
+    CliffComponent,
+    BiasComponent,
     BracketPipe,
-    UnlessDirective
+    UnlessDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
