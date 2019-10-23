@@ -4,7 +4,7 @@
 <input #textboxIncontinently (keyup)="onKeyupIncontinently(textboxIncontinently.value)">
 <p>
   <span>Используется переменная ссылки шаблона без двухсторонней привязки: </span>
-  <span>{{ messageFromTextbox }}</span>
+  <span>{{ messageIncontinently }}</span>
 </p>
 
 <!--(keyup.enter) - привязка обработчика на нажатие по клавише Enter-->
@@ -15,7 +15,7 @@
   <span>{{ messageKeypress }}</span>
 </p>
 
-<!--(blur)="onKeyupTwoEvents(textboxTwoBox)" - обработчик на событие потери фокуса-->
+<!--(blur)="onKeyupTwoEvents(textboxTwoEvents)" - обработчик на событие потери фокуса-->
 <span>Обработчики на события потери фокуса и нажатие ввода: </span>
 <input #textboxTwoEvents
   (keyup.enter)="onKeyupTwoEvents(textboxTwoEvents.value)"

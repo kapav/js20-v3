@@ -11,7 +11,7 @@ export class InclineComponent implements OnInit {
 
   public itemsSource: string[]
 
-  messageFromTextbox: string
+  messageIncontinently: string
   messageKeypress: string
   messageTwoEvents: string
 
@@ -26,8 +26,8 @@ export class InclineComponent implements OnInit {
     this.itemsSource = this.evidenceService.getData()
   }
 
-  onKeyupFromTextbox(data) {
-    this.messageFromTextbox = data
+  onKeyupIncontinently(data) {
+    this.messageIncontinently = data
   }
 
   onKeyupKeypress(data) {
