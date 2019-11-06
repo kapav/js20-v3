@@ -17,7 +17,7 @@
       <label for="emailCo">Почта:</label>
       <input type="text" id="emailCo" class="form-control"
         formControlName="email">
-      <div *ngIf="formErrors" class="alert alert-danger">
+      <div *ngIf="formErrors.email" class="alert alert-danger">
         {{ formErrors.email }}
       </div>
     </div>

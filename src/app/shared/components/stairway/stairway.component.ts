@@ -17,9 +17,9 @@ export class StairwayComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
-    // FormBuilder - класс. предоставляющий удобный интерфейс для создания экземпляров Formcontrol'а
+    // FormBuilder - класс, предоставляющий удобный интерфейс для создания экземпляров FormControl'а
     this.loginForm = this.fb.group({
-      // validators - класс со статическими методами для валидации.
+      // Validators - класс со статическими методами для валидации.
       // При передаче объекта структуры модели
       // первый параметр - значение поля ввода,
       // второй параметр - валидатор или массив валидаторов.
